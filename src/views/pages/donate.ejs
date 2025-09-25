@@ -1,0 +1,295 @@
+<!-- Header Section -->
+<section class="donate-header">
+  <div class="donate-form-container">
+    <div class="text-center">
+      <h1 class="donate-title">Make a Difference</h1>
+      <p class="donate-subtitle">
+        Your contribution can save lives. Donate resources to help disaster victims in need.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Urgent Needs (refreshed) -->
+  <div class="donate-urgent-needs">
+    <div class="donate-urgent-needs-container">
+      <h2 class="donate-urgent-needs-title">🚨 High Demand Items</h2>
+      <div class="donate-urgent-needs-tags">
+        <span class="donate-urgent-tag">💧 Clean Water in XYZ Area</span>
+        <span class="donate-urgent-tag">🍞 Food in ABC District</span>
+        <span class="donate-urgent-tag">💊 Medical Supplies in DEF Region</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgent Needs Section -->
+<section class="py-8 bg-red-50 border-b">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-red-800 mb-4">🚨 High Demand Items</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">💧 Clean Water in XYZ Area</span>
+        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">🍞 Food in ABC District</span>
+        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">💊 Medical Supplies in DEF Region</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Donation Form Section -->
+<section class="donate-form">
+  <div class="donate-form-container">
+    <div class="donate-form-card">
+      <div class="donate-form-header">
+        <div class="donate-form-icon"><span>💝</span></div>
+        <h2 class="donate-form-title">Donation Form</h2>
+        <p class="donate-form-description">Help us coordinate relief efforts by sharing what you can contribute</p>
+      </div>
+
+      <div class="donate-grid-2">
+        <form id="donateForm" class="donate-form-grid">
+        <!-- Donor Information -->
+        <div class="donate-form-grid-2">
+          <div class="donate-form-group">
+            <label for="donorName" class="donate-form-label">
+              Donor/Organization Name *
+            </label>
+            <input 
+              id="donorName" 
+              name="donorName" 
+              type="text" 
+              required 
+              class="donate-form-input"
+              placeholder="Your name or organization"
+            />
+          </div>
+          
+          <div class="donate-form-group">
+            <label for="contactInfo" class="donate-form-label">
+              Contact Information *
+            </label>
+            <input 
+              id="contactInfo" 
+              name="contactInfo" 
+              type="tel" 
+              required 
+              class="donate-form-input"
+              placeholder="Phone number or email"
+            />
+          </div>
+        </div>
+
+        <!-- Resource Information -->
+        <div class="donate-form-grid-2">
+          <div class="donate-form-group">
+            <label for="itemType" class="donate-form-label">
+              Resource Type *
+            </label>
+            <select 
+              id="itemType" 
+              name="itemType" 
+              required 
+              class="donate-form-select"
+            >
+              <option value="">Select resource type</option>
+              <option value="food">🍞 Food & Water</option>
+              <option value="medicine">💊 Medicine & Medical Supplies</option>
+              <option value="clothes">👕 Clothing & Blankets</option>
+              <option value="shelter">🏠 Shelter Materials</option>
+              <option value="money">💰 Financial Donation</option>
+              <option value="volunteers">🤝 Volunteer Services</option>
+              <option value="transport">🚗 Transportation</option>
+              <option value="other">📝 Other</option>
+            </select>
+          </div>
+          
+          <div class="donate-form-group">
+            <label for="quantity" class="donate-form-label">
+              Quantity/Amount *
+            </label>
+            <input 
+              id="quantity" 
+              name="quantity" 
+              type="text" 
+              required 
+              class="donate-form-input"
+              placeholder="e.g., 50 kg, 100 pieces, $500"
+            />
+          </div>
+        </div>
+
+        <!-- Location and Availability -->
+        <div class="donate-form-grid-2">
+          <div class="donate-form-group">
+            <label for="location" class="donate-form-label">
+              Pickup/Distribution Location *
+            </label>
+            <input 
+              id="location" 
+              name="location" 
+              type="text" 
+              required 
+              class="donate-form-input"
+              placeholder="Where can items be picked up?"
+            />
+          </div>
+          
+          <div class="donate-form-group">
+            <label for="availability" class="donate-form-label">
+              Availability *
+            </label>
+            <select 
+              id="availability" 
+              name="availability" 
+              required 
+              class="donate-form-select"
+            >
+              <option value="">Select availability</option>
+              <option value="immediate">🚀 Immediate - Available now</option>
+              <option value="today">📅 Today - Available within 24 hours</option>
+              <option value="week">📆 This Week - Available within 7 days</option>
+              <option value="ongoing">🔄 Ongoing - Regular donations</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Additional Details -->
+        <div class="donate-form-group">
+          <label for="description" class="donate-form-label">
+            Additional Details
+          </label>
+          <textarea 
+            id="description" 
+            name="description" 
+            rows="4" 
+            class="donate-form-textarea"
+            placeholder="Any special instructions, conditions, or additional information about your donation..."
+          ></textarea>
+        </div>
+
+        <!-- Anonymous Option -->
+        <div class="donate-form-checkbox">
+          <input 
+            id="anonymous" 
+            name="anonymous" 
+            type="checkbox" 
+            class=""
+          />
+          <label for="anonymous" class="">
+            I would like to remain anonymous
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="donate-form-button">
+            <span class="mr-2">💝</span>
+            Submit Donation
+          </button>
+        </div>
+        </form>
+
+        <!-- Sidebar: tips / info -->
+        <aside class="donate-side-card">
+          <h3 class="donate-side-title">Tips for Donating</h3>
+          <ul class="donate-side-list">
+            <li>Provide accurate pickup location and contact info</li>
+            <li>Label perishable items and expiration dates</li>
+            <li>Bundle similar items together for faster distribution</li>
+          </ul>
+          <div class="donate-side-divider"></div>
+          <h4 class="donate-side-subtitle">Popular Contributions</h4>
+          <div class="donate-side-tags">
+            <span>🔦 Flashlights</span>
+            <span>🧴 Hygiene Kits</span>
+            <span>🧃 Bottled Water</span>
+            <span>🍚 Dry Food</span>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Status Messages -->
+      <div id="status" class="donate-form-status"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Donation Tracking Section -->
+<section class="donate-tracking">
+  <div class="donate-tracking-container">
+    <div class="text-center mb-12">
+      <h2 class="donate-tracking-title">Track Your Donation</h2>
+      <p class="donate-tracking-subtitle">Monitor how your contribution is making a difference</p>
+    </div>
+    
+    <div class="donate-tracking-grid">
+      <div class="text-center">
+        <input id="donationTrackId" type="text" class="donate-form-input" placeholder="Enter Donation ID to track" style="max-width: 520px; width: 100%;" />
+        <button id="donationTrackBtn" class="donate-form-button" style="margin-top: 0.75rem;">Track</button>
+        <p id="donationTrackError" class="mt-2 text-sm text-red-600"></p>
+      </div>
+      <div id="donationTracker" class="donate-tracking-steps">
+        <div class="donate-tracking-item" data-step="pending_pickup">
+          <div class="donate-tracking-icon blue"><span>⏳</span></div>
+          <div class="donate-tracking-title">Pending Pickup</div>
+          <div class="donate-tracking-description">Awaiting collection</div>
+        </div>
+        <div class="donate-tracking-item" data-step="in_transit">
+          <div class="donate-tracking-icon yellow"><span>🚚</span></div>
+          <div class="donate-tracking-title">In Transit</div>
+          <div class="donate-tracking-description">On the way to recipients</div>
+        </div>
+        <div class="donate-tracking-item" data-step="distributed">
+          <div class="donate-tracking-icon orange"><span>📦</span></div>
+          <div class="donate-tracking-title">Distributed</div>
+          <div class="donate-tracking-description">Delivered to victims</div>
+        </div>
+        <div class="donate-tracking-item" data-step="completed">
+          <div class="donate-tracking-icon green"><span>✅</span></div>
+          <div class="donate-tracking-title">Completed</div>
+          <div class="donate-tracking-description">Mission accomplished</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Past Donations Section -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">Your Past Donations</h2>
+      <p class="text-lg text-gray-600">Review your previous contributions</p>
+    </div>
+    <div id="pastDonations" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- Thank You Section -->
+<section class="thank-you-section">
+  <div class="thank-you-container">
+    <h2 class="thank-you-title">Thank You for Your Generosity</h2>
+    <p class="thank-you-subtitle">
+      Every donation counts. Your help saves lives and brings hope to those in need.
+    </p>
+    <div class="thank-you-grid">
+      <div class="thank-you-item">
+        <div class="thank-you-icon">❤️</div>
+        <h3 class="thank-you-item-title">Compassion</h3>
+        <p class="thank-you-item-description">Your kindness makes a difference</p>
+      </div>
+      <div class="thank-you-item">
+        <div class="thank-you-icon">🤝</div>
+        <h3 class="thank-you-item-title">Community</h3>
+        <p class="thank-you-item-description">Together we are stronger</p>
+      </div>
+      <div class="thank-you-item">
+        <div class="thank-you-icon">🌟</div>
+        <h3 class="thank-you-item-title">Hope</h3>
+        <p class="thank-you-item-description">Bringing light to dark times</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/public/js/donate.js"></script>
